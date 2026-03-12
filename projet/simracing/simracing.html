@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet SimRacing - Louis Merlet</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="simracing-page">
+    <header>
+        <nav>
+            <ul>
+                <li class="nav-home-item"><a href="../../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="../../index.html#projects" class="nav-link">Projets</a></li>
+                <li><a href="mailto:tonadresse@email.com" class="btn-contact">Me contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sim-hero">
+        <div class="sim-hero__content">
+            <p class="sim-kicker">Projet personnel</p>
+            <h1>Setup SimRacing DIY</h1>
+            <p class="sim-intro">
+                Conception d'un pedalier simracing haute precision: modelisation 3D, carte electronique
+                sur mesure, et integration logicielle pour un ressenti de freinage realiste.
+            </p>
+            <div class="sim-hero__stats">
+                <article>
+                    <h2>3</h2>
+                    <p>Disciplines combinees</p>
+                </article>
+                <article>
+                    <h2>1</h2>
+                    <p>PCB personnalise</p>
+                </article>
+                <article>
+                    <h2>100%</h2>
+                    <p>Prototype DIY</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <main class="sim-layout">
+        <section class="sim-card">
+            <h2>Contexte</h2>
+            <p>
+                L'objectif etait d'ameliorer la precision du freinage en simulation automobile.
+                Les pedaliers d'entree de gamme manquent souvent de progressivite, donc j'ai choisi
+                une approche basee sur capteur de force (load cell) pour reproduire une sensation proche
+                d'un frein reel.
+            </p>
+        </section>
+
+        <section class="sim-card">
+            <h2>Objectifs du projet</h2>
+            <ul class="sim-list">
+                <li>Construire un pedalier solide et reglable.</li>
+                <li>Mesurer la force de pression plutot que la course de pedale.</li>
+                <li>Creer une electronique fiable et simple a maintenir.</li>
+                <li>Obtenir un comportement cohérent en jeu (HID USB).</li>
+            </ul>
+        </section>
+
+        <section class="sim-card">
+            <h2>Fiche technique</h2>
+            <div class="sim-tech-grid">
+                <article>
+                    <h3>CAO electronique</h3>
+                    <p>EasyEDA pour le schema et le routage PCB.</p>
+                </article>
+                <article>
+                    <h3>Conception mecanique</h3>
+                    <p>Solidworks Student pour toute la modélisation du projet</p>
+                </article>
+                <article>
+                    <h3>Acquisition capteur</h3>
+                    <p>HX711 pour amplifier les jauges de contrainte.</p>
+                </article>
+                <article>
+                    <h3>Controle USB</h3>
+                    <p>Arduino Pro Micro configure en peripherique HID.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="sim-card">
+            <h2>Processus de realisation</h2>
+            <div class="sim-accordion">
+                <details open>
+                    <summary>1. Analyse du besoin</summary>
+                    <p>
+                        Definition des contraintes: force cible au frein, encombrement, fiabilite des pieces
+                        et budget maximum pour rester realiste en projet personnel.
+                    </p>
+                </details>
+                <details>
+                    <summary>2. Conception 3D</summary>
+                    <p>
+                        Creation des bras de pedale, de la geometrie des points d'appui et des supports
+                        pour garantir une course stable et limiter les jeux mecaniques.
+                    </p>
+                </details>
+                <details>
+                    <summary>3. Conception electronique</summary>
+                    <p>
+                        Schema de la carte de lecture load cell, routage puis verification des connexions
+                        avant integration avec le microcontroleur.
+                    </p>
+                </details>
+                <details>
+                    <summary>4. Integration et tests</summary>
+                    <p>
+                        Calibration de la mesure, tests en situation sur simulateur, puis ajustements
+                        des reglages pour un freinage progressif et reproductible.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <section class="sim-card">
+            <div class="sim-gallery-head">
+                <h2>Galerie du projet</h2>
+                <label for="galleryFilter">Filtrer :</label>
+                <select id="galleryFilter">
+                    <option value="all">Tout afficher</option>
+                    <option value="meca">Mecanique</option>
+                    <option value="elec">Electronique</option>
+                    <option value="test">Tests et resultat</option>
+                </select>
+            </div>
+            <p class="sim-gallery-note">
+                Clique sur une carte pour l'ouvrir en grand. Tu peux remplacer chaque image plus tard.
+            </p>
+            <div class="sim-gallery" id="simGallery">
+                <button class="sim-photo sim-photo--placeholder" data-category="meca" data-caption="CAO des bras de pedale - Fusion 360" type="button">
+                    <span>Photo mecanique 1</span>
+                </button>
+                <button class="sim-photo sim-photo--placeholder" data-category="meca" data-caption="Prototype imprime et montage du support" type="button">
+                    <span>Photo mecanique 2</span>
+                </button>
+                <button class="sim-photo sim-photo--placeholder" data-category="elec" data-caption="Schema et PCB EasyEDA" type="button">
+                    <span>Photo electronique 1</span>
+                </button>
+                <button class="sim-photo sim-photo--placeholder" data-category="elec" data-caption="Carte avec HX711 et cablage capteur" type="button">
+                    <span>Photo electronique 2</span>
+                </button>
+                <button class="sim-photo sim-photo--placeholder" data-category="test" data-caption="Session de calibration" type="button">
+                    <span>Photo test 1</span>
+                </button>
+                <button class="sim-photo sim-photo--placeholder" data-category="test" data-caption="Resultat en simulation" type="button">
+                    <span>Photo test 2</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="sim-lightbox" id="simLightbox" aria-hidden="true">
+        <div class="sim-lightbox__panel">
+            <button id="lightboxClose" type="button" aria-label="Fermer">×</button>
+            <div class="sim-lightbox__media" id="lightboxMedia"></div>
+            <p id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>A propos</h3>
+                    <a href="../../index.html#hero">Mon profil</a>
+                    <a href="../../index.html#projects">Mes projets</a>
+                    <a href="../../index.html#skills">Mes competences</a>
+                    <a href="../../index.html#timeline">Mon parcours</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Aides</h3>
+                    <a href="../../projet/cv.html">CV</a>
+                    <a href="#">Recommandations</a>
+                    <a href="#">Questions frequentes</a>
+                    <a href="#">Lexique technique</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Creation</h3>
+                    <a href="#">Conception 3D</a>
+                    <a href="#">Electronique</a>
+                    <a href="#">Developpement</a>
+                    <a href="#">Administration reseau</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Divers</h3>
+                    <a href="#">Mentions legales</a>
+                    <a href="#">Politique de confidentialite</a>
+                    <a href="#">Me contacter</a>
+                    <a href="#">Plan du site</a>
+                </div>
+            </div>
+
+            <div class="footer-brand-line">
+                <p class="footer-brand">Louis<span>Merlet</span></p>
+                <p class="footer-copy">Copyright © 2026 Louis Merlet - Tous droits reserves</p>
+            </div>
+
+            <div class="footer-socials" aria-label="Reseaux sociaux">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Pinterest">p</a>
+                <a href="#" aria-label="YouTube">yt</a>
+                <a href="#" aria-label="Email">@</a>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consentement cookies">
+        <p>
+            Ce site utilise des cookies pour ameliorer votre experience. Vous pouvez accepter ou refuser.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accepter</button>
+            <button type="button" class="cookie-btn cookie-btn-refuse" id="cookieRefuseBtn">Refuser</button>
+        </div>
+    </aside>
+
+    <script src="./main.js"></script>
+</body>
+</html>

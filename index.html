@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Louis MERLET</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">à propos</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="contact.html" class="btn-contact">Me Contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="image/Tête_Louis.png" alt="Photo de Louis Merlet" class="profile-pic">
+        <h1>Bonjour, je suis Louis Merlet</h1>
+        <p>Un élève de Terminal BAC pro CIEL (cybersécurité, informatique et réseaux, électronique)</p>
+    </section>
+
+    <section id="projects">
+        <h2>Mes Projets</h2>
+
+        <div class="slider-container">
+            <button class="prev-btn" onclick="moveSlider(-1)">&#10094;</button>
+
+            <div class="project-window">
+                <div class="project-grid" id="slider">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Setup SimRacing DIY</h3>
+                            <p>Réalisation d'un pédalier haute précision et volant. CAO électronique et impression 3D.</p>
+                            <a href="projet/simracing/simracing.html" class="btn-more">Voir les détails</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Conception de Boitier sous Cahier des charges</h3>
+                            <p>Durant un stage de Terminal, j'ai eu l'occasion de réaliser différents boitiers avec des contraintes données. Le tout réalisé sur Solidworks.</p>
+                            <a href="#" class="btn-more">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Création d'un portofolio sur Site Internet</h3>
+                            <p>Durant nos cours et sur mon temps personnelles, j'ai développé par code mon portofolio pour simplifier mon contact social et me faire connaître plus facilement.</p>
+                            <a href="#" class="btn-more">Voir les détails</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Réparation de matérielles Airsoft</h3>
+                            <p>Pratiquant du airsoft en loisirs, j'ai eu l'occasion de réparer différents matérielles d'airsoft à l'aide de la modélisation 3D et l'impression des pièces réalisé pour remplacer les pièces défectueuses qui nous fait gagner énormément de budget.</p>
+                            <a href="#" class="btn-more">Voir les détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="next-btn" onclick="moveSlider(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="skills-intro">
+            <h2>Competences Bac Pro CIEL</h2>
+            <p>Selectionne un domaine pour afficher mes acquis. Les jauges se declenchent au scroll.</p>
+        </div>
+
+        <div class="skills-filters" role="tablist" aria-label="Filtres de competences">
+            <button class="skills-filter is-active" data-filter="all" type="button">Tout</button>
+            <button class="skills-filter" data-filter="reseaux" type="button">Reseaux</button>
+            <button class="skills-filter" data-filter="cyber" type="button">Cyber</button>
+            <button class="skills-filter" data-filter="dev" type="button">Developpement</button>
+            <button class="skills-filter" data-filter="electronique" type="button">Electronique</button>
+            <button class="skills-filter" data-filter="transverse" type="button">Transverse</button>
+        </div>
+
+        <div class="skills-grid">
+            <article class="skill-card" data-domain="reseaux" data-level="82">
+                <p class="skill-domain">Reseaux</p>
+                <h3>Installer et administrer une infrastructure locale</h3>
+                <p class="skill-text">Adressage IP, VLAN, services de base et diagnostic de connectivite.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 82%</p>
+            </article>
+
+            <article class="skill-card" data-domain="cyber" data-level="76">
+                <p class="skill-domain">Cybersecurite</p>
+                <h3>Appliquer les bonnes pratiques de securisation</h3>
+                <p class="skill-text">Durcissement de postes, gestion des droits, sensibilisation et traces.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 76%</p>
+            </article>
+
+            <article class="skill-card" data-domain="dev" data-level="70">
+                <p class="skill-domain">Developpement</p>
+                <h3>Contribuer a un logiciel metier</h3>
+                <p class="skill-text">Tests, correction de bugs, logique applicative et bases WinDev.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 70%</p>
+            </article>
+
+            <article class="skill-card" data-domain="electronique" data-level="78">
+                <p class="skill-domain">Electronique</p>
+                <h3>Concevoir et integrer des solutions electroniques</h3>
+                <p class="skill-text">CAO de cartes, prototypage, verification et integration mecanique.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 78%</p>
+            </article>
+
+            <article class="skill-card" data-domain="transverse" data-level="84">
+                <p class="skill-domain">Transverse</p>
+                <h3>Communiquer et documenter les interventions</h3>
+                <p class="skill-text">Comptes rendus clairs, echanges equipe/client et suivi des actions.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 84%</p>
+            </article>
+
+            <article class="skill-card" data-domain="reseaux" data-level="74">
+                <p class="skill-domain">Maintenance</p>
+                <h3>Assurer la continuite de service</h3>
+                <p class="skill-text">Diagnostic, correction, tests de remise en service et prevention.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 74%</p>
+            </article>
+
+            <article class="skill-card" data-domain="transverse" data-level="80">
+                <p class="skill-domain">Transverse</p>
+                <h3>Modélisation et conception de pièce sous contraintes</h3>
+                <p class="skill-text">Concevoir, Modélisé, réspecter un cahier des charges, adapter la pièces celon un budget précis et les contraintes physiques.</p>
+                <div class="skill-bar"><span></span></div>
+                <p class="skill-score">Niveau estime: 74%</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="timeline" id="timeline">
+        <div class="container left-container">
+            <div class="texte-box" data-url="https://college-jeanyole.com/">
+                <h2>Collège Jean Yole</h2>
+                <small>2015 - 2018</small>
+                <p>J'ai effectué ma scolarité au college Jean Yole au Herbiers, où j'ai développé une passion pour l'informatique.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="texte-box" data-url="https://jean23-herbiers.com/">
+                <h2>Lycée Jean XXIII</h2>
+                <small>2024 - 2024 (3 mois)</small>
+                <p>J'ai effectue ma scolarité au lycée Jean XXIII aux Herbiers. J'y ai suivi 3 mois avant de rejoindre un nouvel établissement.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container left-container">
+            <div class="texte-box" data-url="https://www.google.com/search?q=Lycee+Saint+Gabriel+Saint+Laurent+sur+Sevre">
+                <h2>Lycée Saint Gabriel</h2>
+                <small>Arrivée en décembre 2024</small>
+                <p>Début en Bac Pro CIEL en Seconde au sein de l'établissement Saint Gabriel à Saint-Laurent-sur-Sèvre.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="texte-box" data-url="https://www.vm-materiaux.fr/">
+                <h2>Stage à VM Matériaux</h2>
+                <small>Date du stage</small>
+                <p>Premier stage de Seconde d'une durée de 3 semaines au siege de VM Matériaux à L'Herbergement en administration réseaux.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container left-container">
+            <div class="texte-box" data-url="https://jean23-herbiers.com/">
+                <h2>Stage au Lycée Jean XXIII</h2>
+                <small>Date du stage</small>
+                <p>Second stage de Seconde au sein de l'établissement Jean XXIII avec l'informaticien de l'établissement pendant 3 semaines.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="texte-box" data-url="https://85.agendaculturel.fr/theatre-pierre-barouh">
+                <h2>Stage au Théâtre Pierre-Barouh</h2>
+                <small>Date du stage</small>
+                <p>Premier stage de Première au sein d'un théatre durant 4 semaines en tant que régisseur technique.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container left-container">
+            <div class="texte-box" data-url="https://applicamp.fr/">
+                <h2>Stage à Applicamp</h2>
+                <small>Date du stage</small>
+                <p>Second stage de Première dans une entreprise developpant un logiciel d'administration pour campings en tant que testeur et developpeur WinDev.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="texte-box" data-url="https://www.hygiene-expert.com/fr/">
+                <h2>Stage à Hygiène Expert / JDC SA</h2>
+                <small>Date du stage</small>
+                <p>Premier stage de Terminale d'une durée de 3 semaines dans une entreprise de developpement d'un logiciel de gestion sanitaire pour la restauration.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container left-container">
+            <div class="texte-box" data-url="https://rcc-electronique.fr/">
+                <h2>Stage chez RCC Electronique</h2>
+                <small>Date du stage</small>
+                <p>Second et dernier stage de ma scolariter en Bac Pro CIEL, dans une entreprise de reparation electronique sur plusieurs secteurs, dont l'automobile.</p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container future-container">
+            <div class="future-box" data-url="https://www.google.com/search?q=Metiers+cybersecurite+officier+armee+France">
+                <h2>Mes Projets Futurs</h2>
+                <p>Aujourd'hui, je suis toujours en phase de réfléxion me traverse la tête. Je suis passioné de CAo dont la 3D sur solidworks et de la conception de carte électronique sur EasyEda. Je suis aussi traversé à l'idée d'intégrer l'armée après mes étude spour me spécialisé en temps que officier. Je souhaite aussi si la possibilité me le permet de travaillé dans le monde du sport automobile ou crée ma propre entreprise de vente de matérielle de simracing.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-contact-section" id="about-contact">
+        <div class="about-contact-inner">
+            <p class="about-contact-tag">A propos</p>
+            <h2>Informations personnelles et documents</h2>
+            <p class="about-contact-intro">
+                Cette section regroupe mes coordonnees, mon etablissement actuel, mes certifications et mes documents utiles.
+            </p>
+
+            <div class="about-contact-grid">
+                <article class="about-card">
+                    <h3>Coordonnees</h3>
+                    <ul class="about-list">
+                        <li>
+                            <span>Email</span>
+                            <a href="mailto:merletlouis85@gmail.com">merletlouis85@gmail.com</a>
+                        </li>
+                        <li>
+                            <span>Telephone</span>
+                            <a href="tel:+33762686164">+33 7 62 68 61 64</a>
+                        </li>
+                        <li>
+                            <span>LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/votre-profil/" target="_blank" rel="noopener noreferrer">linkedin.com/in/votre-profil</a>
+                        </li>
+                        <li>
+                            <span>Instagram</span>
+                            <a href="https://www.instagram.com/votreprofil/" target="_blank" rel="noopener noreferrer">@votreprofil</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="about-card">
+                    <h3>Parcours et certifications</h3>
+                    <ul class="about-list">
+                        <li>
+                            <span>Ecole actuelle</span>
+                            <p>Lycée Saint Gabriel, Saint-Laurent-sur-Sevre (Bac Pro CIEL)</p>
+                        </li>
+                        <li>
+                            <span>Certification</span>
+                            <p>SST (Sauveteur Secouriste du Travail)</p>
+                        </li>
+                        <li>
+                            <span>Diplome formation</span>
+                            <p>Cisco (formation reseaux)</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="about-card about-card-actions">
+                    <h3>Documents</h3>
+                    <p>
+                        Telecharge mon CV ou consulte la page annexe avec mes bulletins et fiches de felicitations.
+                    </p>
+                    <div class="about-actions">
+                        <a href="projet/CV%20conception%203D.pdf" class="about-btn" download>Telecharger mon CV</a>
+                        <a href="annexes.html" class="about-btn about-btn-secondary">Voir la page annexes</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>A propos</h3>
+                    <a href="#hero">Mon profil</a>
+                    <a href="#projects">Mes projets</a>
+                    <a href="#skills">Mes competences</a>
+                    <a href="#timeline">Mon parcours</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Aides</h3>
+                    <a href="projet/cv.html">CV</a>
+                    <a href="#">Recommandations</a>
+                    <a href="#">Questions frequentes</a>
+                    <a href="#">Lexique technique</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Creation</h3>
+                    <a href="#">Conception 3D</a>
+                    <a href="#">Electronique</a>
+                    <a href="#">Developpement</a>
+                    <a href="#">Administration reseau</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Divers</h3>
+                    <a href="#">Mentions legales</a>
+                    <a href="#">Politique de confidentialite</a>
+                    <a href="contact.html">Me contacter</a>
+                    <a href="#">Plan du site</a>
+                </div>
+            </div>
+
+            <div class="footer-brand-line">
+                <p class="footer-brand">Louis<span>Merlet</span></p>
+                <p class="footer-copy">Copyright © 2026 Louis Merlet - Tous droits reserves</p>
+            </div>
+
+            <div class="footer-socials" aria-label="Reseaux sociaux">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Twitter">t</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Pinterest">p</a>
+                <a href="#" aria-label="YouTube">yt</a>
+                <a href="mailto:merletlouis85@gmail.com" aria-label="Email">@</a>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consentement cookies">
+        <p>
+            Ce site utilise des cookies pour ameliorer votre experience. Vous pouvez accepter ou refuser.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn cookie-btn-accept" id="cookieAcceptBtn">Accepter</button>
+            <button type="button" class="cookie-btn cookie-btn-refuse" id="cookieRefuseBtn">Refuser</button>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
